@@ -1,0 +1,735 @@
+[
+{
+    "order": 1,
+    "questions": [
+        {
+            "content": {
+                "en": "What are three responsibilities of citizenship?",
+                "es": "¿Cuáles son las tres responsabilidades de la ciudadanía?",
+                "fr": "Quelles sont les trois responsabilités de la citoyenneté?",
+                "zh-cn": "公民的三項責任是什麼？",
+                "pa": "ਨਾਗਰਿਕਤਾ ਦੀਆਂ ਤਿੰਨ ਜ਼ਿੰਮੇਵਾਰੀਆਂ ਕੀ ਹਨ?",
+                "ar": "ما هي مسؤوليات المواطنة الثلاث؟"
+            }
+        }        
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "1. Obey...Jury, the first option is the most complete",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Helping others in the community, voting in elections, protecting and enjoying our heritage and environment",
+                "es": "Ayudar a otros en la comunidad, votar en las elecciones, proteger y disfrutar de nuestro patrimonio y medio ambiente.",
+                "fr": "Aider les autres dans la communauté, voter aux élections, protéger et profiter de notre patrimoine et de notre environnement",
+                "zh-cn": "幫助社區中的其他人、在選舉中投票、保護和享受我們的遺產和環境",
+                "pa": "ਸਮਾਜ ਵਿੱਚ ਦੂਜਿਆਂ ਦੀ ਮਦਦ ਕਰਨਾ, ਚੋਣਾਂ ਵਿੱਚ ਵੋਟ ਦੇਣਾ, ਆਪਣੇ ਵਿਰਸੇ ਅਤੇ ਵਾਤਾਵਰਣ ਦੀ ਰੱਖਿਆ ਅਤੇ ਆਨੰਦ ਲੈਣਾ",
+                "ar": "مساعدة الآخرين في المجتمع، والتصويت في الانتخابات، وحماية تراثنا وبيئتنا والاستمتاع بها"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Being loyal to Canada, recycling newspapers, and serving in the navy, army, or air force or lo que sea",
+                "es": "Ser leal a Canadá, reciclar periódicos y servir en la marina, el ejército, la fuerza aérea o lo que sea.",
+                "fr": "Être fidèle au Canada, recycler les journaux et servir dans la marine, l'armée ou la force aérienne",
+                "zh-cn": "忠於加拿大，回收報紙，並在海軍、陸軍、空軍或海外服役",
+                "pa": "ਕੈਨੇਡਾ ਪ੍ਰਤੀ ਵਫ਼ਾਦਾਰ ਹੋਣਾ, ਅਖਬਾਰਾਂ ਨੂੰ ਰੀਸਾਈਕਲ ਕਰਨਾ, ਅਤੇ ਜਲ ਸੈਨਾ, ਫੌਜ ਜਾਂ ਹਵਾਈ ਸੈਨਾ ਜਾਂ ਸਮੁੰਦਰੀ ਫੌਜ ਵਿੱਚ ਸੇਵਾ ਕਰਨਾ",
+                "ar": "الولاء لكندا، وإعادة تدوير الصحف، والخدمة في البحرية أو الجيش أو القوات الجوية أو البحر"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Learning both official languages, voting in elections, and belonging to a union",
+                "es": "Aprender ambos idiomas oficiales, votar en elecciones y pertenecer a un sindicato",
+                "fr": "Apprendre les deux langues officielles, voter aux élections et appartenir à un syndicat",
+                "zh-cn": "學習兩種官方語言、在選舉中投票、加入工會",
+                "pa": "ਦੋਵੇਂ ਸਰਕਾਰੀ ਭਾਸ਼ਾਵਾਂ ਸਿੱਖਣਾ, ਚੋਣਾਂ ਵਿੱਚ ਵੋਟ ਦੇਣਾ, ਅਤੇ ਇੱਕ ਯੂਨੀਅਨ ਨਾਲ ਸਬੰਧਤ ਹੋਣਾ",
+                "ar": "تعلم اللغتين الرسميتين والتصويت في الانتخابات والانتماء للنقابة"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Buying Canadian products, owning your own business, and using less water",
+                "es": "Comprar productos canadienses, ser dueño de su propio negocio y usar menos agua",
+                "fr": "Acheter des produits canadiens, posséder sa propre entreprise et utiliser moins d'eau",
+                "zh-cn": "購買加拿大產品、擁有自己的企業並減少用水",
+                "pa": "ਕੈਨੇਡੀਅਨ ਉਤਪਾਦ ਖਰੀਦਣਾ, ਆਪਣੇ ਖੁਦ ਦੇ ਕਾਰੋਬਾਰ ਦਾ ਮਾਲਕ ਹੋਣਾ, ਅਤੇ ਘੱਟ ਪਾਣੀ ਦੀ ਵਰਤੋਂ ਕਰਨਾ",
+                "ar": "شراء المنتجات الكندية، وامتلاك مشروعك الخاص، واستخدام كميات أقل من المياه"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {
+        "territory": "value1"
+    }
+},
+{
+    "order": 2,
+    "questions": [
+        {
+            "content": {
+                "en": "Name two key documents that contain our rights and freedoms.",
+                "es": "Nombra dos documentos clave que contienen nuestros derechos y libertades.",
+                "fr": "Nommez deux documents clés qui contiennent nos droits et libertés.",
+                "zh-cn": "列出兩份包含我們的權利和自由的重要文件。",
+                "pa": "ਦੋ ਮੁੱਖ ਦਸਤਾਵੇਜ਼ਾਂ ਦੇ ਨਾਮ ਦੱਸੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਸਾਡੇ ਅਧਿਕਾਰ ਅਤੇ ਆਜ਼ਾਦੀ ਸ਼ਾਮਲ ਹਨ।",
+                "ar": "اذكر وثيقتين رئيسيتين تحتويان على حقوقنا وحرياتنا."
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Magna Carta (Great Charter of Freedoms) and Canadian Charter of Rights and Freedoms",
+                "es": "Carta Magna (Gran Carta de Libertades) y Carta Canadiense de Derechos y Libertades",
+                "fr": "Magna Carta (Grande Charte des libertés) et Charte canadienne des droits et libertés",
+                "zh-cn": "大憲章（自由大憲章）與加拿大權利與自由憲章",
+                "pa": "ਮੈਗਨਾ ਕਾਰਟਾ (ਅਜ਼ਾਦੀ ਦਾ ਮਹਾਨ ਚਾਰਟਰ) ਅਤੇ ਅਧਿਕਾਰਾਂ ਅਤੇ ਆਜ਼ਾਦੀਆਂ ਦਾ ਕੈਨੇਡੀਅਨ ਚਾਰਟਰ",
+                "ar": "ماجنا كارتا (الميثاق العظيم للحريات) والميثاق الكندي للحقوق والحريات"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Canadian Constitution and English Common Law",
+                "es": "Constitución canadiense y derecho consuetudinario inglés",
+                "fr": "La Constitution canadienne et la common law anglaise",
+                "zh-cn": "加拿大憲法與英國普通法",
+                "pa": "ਕੈਨੇਡੀਅਨ ਸੰਵਿਧਾਨ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਸਾਂਝਾ ਕਾਨੂੰਨ",
+                "ar": "الدستور الكندي والقانون العام الإنجليزي"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Civil Code of France and laws passed by Parliament",
+                "es": "Código Civil de Francia y leyes aprobadas por el Parlamento",
+                "fr": "Code civil français et lois votées par le Parlement",
+                "zh-cn": "法國民法典和議會通過的法律",
+                "pa": "ਫਰਾਂਸ ਦਾ ਸਿਵਲ ਕੋਡ ਅਤੇ ਸੰਸਦ ਦੁਆਰਾ ਪਾਸ ਕੀਤੇ ਗਏ ਕਾਨੂੰਨ",
+                "ar": "القانون المدني الفرنسي والقوانين التي أقرها البرلمان"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Canadian Constitution and Civil Code of France",
+                "es": "Constitución canadiense y Código Civil de Francia",
+                "fr": "Constitution canadienne et Code civil de la France",
+                "zh-cn": "加拿大憲法與法國民法典",
+                "pa": "ਕੈਨੇਡੀਅਨ ਸੰਵਿਧਾਨ ਅਤੇ ਫਰਾਂਸ ਦਾ ਸਿਵਲ ਕੋਡ",
+                "ar": "الدستور الكندي والقانون المدني لفرنسا"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "The Canadian Constitution and English common law",
+                "es": "La Constitución canadiense y el derecho consuetudinario inglés.",
+                "fr": "Constitution canadienne et common law anglaise",
+                "zh-cn": "加拿大憲法與英國普通法",
+                "pa": "ਕੈਨੇਡੀਅਨ ਸੰਵਿਧਾਨ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਆਮ ਕਾਨੂੰਨ",
+                "ar": "الدستور الكندي والقانون العام الإنجليزي"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Civil Code of France and the Canadian Constitution",
+                "es": "Código Civil de Francia y la Constitución canadiense",
+                "fr": "Code civil de la France et la Constitution canadienne",
+                "zh-cn": "法國民法典與加拿大憲法",
+                "pa": "ਫਰਾਂਸ ਦਾ ਸਿਵਲ ਕੋਡ ਅਤੇ ਕੈਨੇਡੀਅਨ ਸੰਵਿਧਾਨ",
+                "ar": "القانون المدني الفرنسي والدستور الكندي"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Laws passed by Parliament and English common law",
+                "es": "Leyes aprobadas por el Parlamento y el derecho consuetudinario inglés",
+                "fr": "Lois adoptées par le Parlement et common law anglaise",
+                "zh-cn": "議會通過的法律和英國普通法",
+                "pa": "ਸੰਸਦ ਦੁਆਰਾ ਪਾਸ ਕੀਤੇ ਕਾਨੂੰਨ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਆਮ ਕਾਨੂੰਨ",
+                "ar": "القوانين التي أقرها البرلمان والقانون العام الإنجليزي"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {
+        "territory": [
+            "value4",
+            "value5"
+        ],
+        "mycustomfilter": "mycustomvalue"
+    }
+},
+{
+    "order": 3,
+    "questions": [
+        {
+            "content": {
+                "en": "Identify four (4) rights that Canadians enjoy.",
+                "es": "Identifique cuatro (4) derechos de los que disfrutan los canadienses.",
+                "fr": "Identifiez quatre (4) droits dont jouissent les Canadiens.",
+                "zh-cn": "確定加拿大人享有的四 (4) 項權利。",
+                "pa": "ਚਾਰ (4) ਅਧਿਕਾਰਾਂ ਦੀ ਪਛਾਣ ਕਰੋ ਜੋ ਕੈਨੇਡੀਅਨ ਮਾਣਦੇ ਹਨ।",
+                "ar": "حدد أربعة (4) حقوق يتمتع بها الكنديون."
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Mobility rights, Aboriginal People's Rights, Official Language Rights and Multiculturalism",
+                "es": "Derechos de movilidad, derechos de los pueblos aborígenes, derechos de las lenguas oficiales y multiculturalismo",
+                "fr": "Droits à la mobilité, droits des peuples autochtones, droits linguistiques officiels et multiculturalisme",
+                "zh-cn": "流動權、原住民權利、官方語言權利和多元文化主義",
+                "pa": "ਗਤੀਸ਼ੀਲਤਾ ਅਧਿਕਾਰ, ਆਦਿਵਾਸੀ ਲੋਕਾਂ ਦੇ ਅਧਿਕਾਰ, ਸਰਕਾਰੀ ਭਾਸ਼ਾ ਅਧਿਕਾਰ ਅਤੇ ਬਹੁ-ਸੱਭਿਆਚਾਰਵਾਦ",
+                "ar": "حقوق التنقل، حقوق السكان الأصليين، حقوق اللغة الرسمية والتعددية الثقافية"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Right to life, right to a university education, Right to speak publicly and Official language rights",
+                "es": "Derecho a la vida, derecho a la educación universitaria, derecho a hablar en público y derechos a las lenguas oficiales",
+                "fr": "Droit à la vie, droit à une éducation universitaire, droit de s'exprimer publiquement et droits linguistiques officiels",
+                "zh-cn": "生命權、接受大學教育的權利、公開發言權和官方語言權",
+                "pa": "ਜੀਵਨ ਦਾ ਅਧਿਕਾਰ, ਯੂਨੀਵਰਸਿਟੀ ਸਿੱਖਿਆ ਦਾ ਅਧਿਕਾਰ, ਜਨਤਕ ਤੌਰ 'ਤੇ ਬੋਲਣ ਦਾ ਅਧਿਕਾਰ ਅਤੇ ਸਰਕਾਰੀ ਭਾਸ਼ਾ ਦੇ ਅਧਿਕਾਰ",
+                "ar": "الحق في الحياة، الحق في التعليم الجامعي، الحق في التحدث علناً، وحقوق اللغة الرسمية"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Right to buy property, Right to vote, Security Rights and Multiculturalism",
+                "es": "Derecho a comprar propiedad, derecho al voto, derechos de seguridad y multiculturalismo",
+                "fr": "Droit d'acheter une propriété, droit de vote, droits de sécurité et multiculturalisme",
+                "zh-cn": "購買財產權、投票權、擔保權和多元文化主義",
+                "pa": "ਜਾਇਦਾਦ ਖਰੀਦਣ ਦਾ ਅਧਿਕਾਰ, ਵੋਟ ਦਾ ਅਧਿਕਾਰ, ਸੁਰੱਖਿਆ ਅਧਿਕਾਰ ਅਤੇ ਬਹੁ-ਸੱਭਿਆਚਾਰਵਾਦ",
+                "ar": "حق شراء العقارات، وحق التصويت، والحقوق الأمنية، والتعددية الثقافية"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Mobility rights, Aboriginal People's rights, Right to public assembly and Right to a fair trial",
+                "es": "Derechos de movilidad, derechos de los pueblos aborígenes, derecho de reunión pública y derecho a un juicio justo",
+                "fr": "Droits de mobilité, droits des peuples autochtones, droit de réunion publique et droit à un procès équitable",
+                "zh-cn": "流動權、原住民權利、公共集會權和公平審判權",
+                "pa": "ਗਤੀਸ਼ੀਲਤਾ ਦੇ ਅਧਿਕਾਰ, ਆਦਿਵਾਸੀ ਲੋਕਾਂ ਦੇ ਅਧਿਕਾਰ, ਜਨਤਕ ਅਸੈਂਬਲੀ ਦਾ ਅਧਿਕਾਰ ਅਤੇ ਨਿਰਪੱਖ ਸੁਣਵਾਈ ਦਾ ਅਧਿਕਾਰ",
+                "ar": "حقوق التنقل، حقوق السكان الأصليين، الحق في التجمع العام والحق في محاكمة عادلة"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Freedom of speech, Right to own land, Mobility rights, and Right to a fair trial",
+                "es": "Libertad de expresión, derecho a la propiedad de la tierra, derechos de movilidad y derecho a un juicio justo",
+                "fr": "Liberté d'expression, droit à la propriété foncière, droits à la mobilité et droit à un procès équitable",
+                "zh-cn": "言論自由、擁有土地的權利、流動權和公平審判權",
+                "pa": "ਬੋਲਣ ਦੀ ਆਜ਼ਾਦੀ, ਜ਼ਮੀਨ ਦੀ ਮਾਲਕੀ ਦਾ ਅਧਿਕਾਰ, ਗਤੀਸ਼ੀਲਤਾ ਦੇ ਅਧਿਕਾਰ, ਅਤੇ ਨਿਰਪੱਖ ਮੁਕੱਦਮੇ ਦਾ ਅਧਿਕਾਰ",
+                "ar": "حرية التعبير، الحق في امتلاك الأرض، حقوق التنقل، والحق في محاكمة عادلة"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 4,
+    "questions": [
+        {
+            "content": {
+                "en": "Name four (4) fundamental freedoms that Canadians enjoy.",
+                "es": "Nombre cuatro (4) libertades fundamentales de las que disfrutan los canadienses.",
+                "fr": "Nommez quatre (4) libertés fondamentales dont jouissent les Canadiens.",
+                "zh-cn": "列出加拿大人享有的四 (4) 項基本自由。",
+                "pa": "ਚਾਰ (4) ਬੁਨਿਆਦੀ ਆਜ਼ਾਦੀਆਂ ਦੇ ਨਾਮ ਦੱਸੋ ਜਿਨ੍ਹਾਂ ਦਾ ਕੈਨੇਡੀਅਨ ਆਨੰਦ ਮਾਣਦੇ ਹਨ।",
+                "ar": "اذكر أربع (4) من الحريات الأساسية التي يتمتع بها الكنديون."
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Freedom of religion, belief, peaceful assembly, and speech",
+                "es": "Libertad de religión, de creencias, de reunión pacífica y de expresión",
+                "fr": "Liberté de religion, de croyance, de réunion pacifique et d'expression",
+                "zh-cn": "宗教、信仰、和平集會和言論自由",
+                "pa": "ਧਰਮ, ਵਿਸ਼ਵਾਸ, ਸ਼ਾਂਤਮਈ ਇਕੱਠ ਅਤੇ ਭਾਸ਼ਣ ਦੀ ਆਜ਼ਾਦੀ",
+                "ar": "حرية الدين والمعتقد والتجمع السلمي والتعبير"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Aboriginal peoples' rights, freedom of the press, association, and speech",
+                "es": "Derechos de los pueblos aborígenes, libertad de prensa, asociación y expresión",
+                "fr": "Droits des peuples autochtones, liberté de la presse, d'association et d'expression",
+                "zh-cn": "原住民權利、新聞、結社和言論自由",
+                "pa": "ਆਦਿਵਾਸੀ ਲੋਕਾਂ ਦੇ ਅਧਿਕਾਰ, ਪ੍ਰੈਸ ਦੀ ਆਜ਼ਾਦੀ, ਐਸੋਸੀਏਸ਼ਨ ਅਤੇ ਭਾਸ਼ਣ",
+                "ar": "حقوق الشعوب الأصلية، وحرية الصحافة، وتكوين الجمعيات، وحرية التعبير"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Freedom of religion, peaceful assembly, to break the law and to own a house",
+                "es": "Libertad de religión, reunión pacífica, violar la ley y ser propietario de una casa.",
+                "fr": "Liberté de religion, réunion pacifique, enfreindre la loi et posséder une maison",
+                "zh-cn": "宗教自由、和平集會、違法和擁有房屋的自由",
+                "pa": "ਧਰਮ ਦੀ ਅਜ਼ਾਦੀ, ਸ਼ਾਂਤਮਈ ਇਕੱਠ, ਕਾਨੂੰਨ ਤੋੜਨ ਅਤੇ ਆਪਣਾ ਘਰ ਬਣਾਉਣ ਦੀ",
+                "ar": "حرية الدين والتجمع السلمي ومخالفة القانون وامتلاك منزل"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Freedom of discrimination, association, thought, and freedom of religion",
+                "es": "Libertad de discriminación, asociación, pensamiento y libertad de religión",
+                "fr": "Liberté de discrimination, d'association, de pensée et de religion",
+                "zh-cn": "歧視、結社、思想和宗教自由的自由",
+                "pa": "ਵਿਤਕਰੇ ਦੀ ਆਜ਼ਾਦੀ, ਸੰਗਤ, ਵਿਚਾਰ ਅਤੇ ਧਰਮ ਦੀ ਆਜ਼ਾਦੀ",
+                "ar": "حرية التمييز وتكوين الجمعيات والفكر وحرية الدين"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 5,
+    "questions": [
+        {
+            "content": {
+                "en": "What is meant by the equality of women and men?",
+                "es": "¿Qué se entiende por igualdad entre mujeres y hombres?",
+                "fr": "Qu'entend-on par égalité des femmes et des hommes?",
+                "zh-cn": "男女平等是什麼意思？",
+                "pa": "ਔਰਤਾਂ ਅਤੇ ਮਰਦਾਂ ਦੀ ਬਰਾਬਰੀ ਦਾ ਕੀ ਅਰਥ ਹੈ?",
+                "ar": "ما المقصود بالمساواة بين المرأة والرجل؟"
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Men and women are equal under the law",
+                "es": "Hombres y mujeres son iguales ante la ley",
+                "fr": "Les hommes et les femmes sont égaux devant la loi",
+                "zh-cn": "法律面前男女平等",
+                "pa": "ਕਾਨੂੰਨ ਦੇ ਤਹਿਤ ਔਰਤ ਅਤੇ ਮਰਦ ਬਰਾਬਰ ਹਨ",
+                "ar": "الرجال والنساء متساوون أمام القانون"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Men have more rights than women under the law",
+                "es": "Los hombres tienen más derechos que las mujeres según la ley.",
+                "fr": "Les hommes ont plus de droits que les femmes en vertu de la loi",
+                "zh-cn": "法律規定男性比女性擁有更多權利",
+                "pa": "ਕਾਨੂੰਨ ਤਹਿਤ ਮਰਦਾਂ ਨੂੰ ਔਰਤਾਂ ਨਾਲੋਂ ਵੱਧ ਅਧਿਕਾਰ ਹਨ",
+                "ar": "للرجال حقوق أكثر من النساء بموجب القانون"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Men and women must both do housework",
+                "es": "Tanto hombres como mujeres deben realizar las tareas del hogar.",
+                "fr": "Les hommes et les femmes doivent tous deux faire le ménage",
+                "zh-cn": "男人和女人都必須做家事",
+                "pa": "ਮਰਦ ਅਤੇ ਔਰਤ ਦੋਵਾਂ ਨੂੰ ਘਰ ਦਾ ਕੰਮ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ",
+                "ar": "يجب على الرجال والنساء القيام بالأعمال المنزلية"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Women have more rights than men under the law",
+                "es": "Las mujeres tienen más derechos que los hombres según la ley.",
+                "fr": "Les femmes ont plus de droits que les hommes en vertu de la loi",
+                "zh-cn": "法律賦予女性比男性更多的權利",
+                "pa": "ਕਾਨੂੰਨ ਤਹਿਤ ਔਰਤਾਂ ਨੂੰ ਮਰਦਾਂ ਨਾਲੋਂ ਵੱਧ ਅਧਿਕਾਰ ਹਨ",
+                "ar": "للمرأة حقوق أكثر من الرجل بموجب القانون"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 6,
+    "questions": [
+        {
+            "content": {
+                "en": "What are some examples of taking responsibility for yourself and your family?",
+                "es": "¿Cuáles son algunos ejemplos de cómo asumir la responsabilidad de usted y su familia?",
+                "fr": "Quels sont quelques exemples de prise de responsabilité envers vous-même et votre famille?",
+                "zh-cn": "有哪些對自己和家人負責的例子？",
+                "pa": "ਆਪਣੇ ਅਤੇ ਆਪਣੇ ਪਰਿਵਾਰ ਲਈ ਜ਼ਿੰਮੇਵਾਰੀ ਲੈਣ ਦੀਆਂ ਕੁਝ ਉਦਾਹਰਣਾਂ ਕੀ ਹਨ?",
+                "ar": "ما هي بعض الأمثلة على تحمل المسؤولية تجاه نفسك وعائلتك؟"
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Getting a job and working hard in keeping with one's abilities",
+                "es": "Conseguir un trabajo y trabajar duro de acuerdo con las capacidades de cada uno.",
+                "fr": "Obtenir un emploi et travailler dur en fonction de ses capacités",
+                "zh-cn": "找到工作並根據自己的能力努力工作",
+                "pa": "ਨੌਕਰੀ ਪ੍ਰਾਪਤ ਕਰਨਾ ਅਤੇ ਆਪਣੀ ਕਾਬਲੀਅਤ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖਦੇ ਹੋਏ ਸਖਤ ਮਿਹਨਤ ਕਰਨਾ",
+                "ar": "الحصول على عمل والعمل الجاد بما يتناسب مع قدراته"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Studying hard so you can earn enough money in the future",
+                "es": "Estudiar mucho para poder ganar suficiente dinero en el futuro",
+                "fr": "Étudier dur pour gagner suffisamment d'argent à l'avenir",
+                "zh-cn": "努力學習，以便將來能賺到足夠的錢",
+                "pa": "ਸਖਤ ਅਧਿਐਨ ਕਰਨਾ ਤਾਂ ਜੋ ਤੁਸੀਂ ਭਵਿੱਖ ਵਿੱਚ ਕਾਫ਼ੀ ਪੈਸਾ ਕਮਾ ਸਕੋ",
+                "ar": "ادرس بجد حتى تتمكن من كسب ما يكفي من المال في المستقبل"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Preparing food and keeping the house clean",
+                "es": "Preparar la comida y mantener la casa limpia.",
+                "fr": "Préparer la nourriture et garder la maison propre",
+                "zh-cn": "準備食物並保持房子清潔",
+                "pa": "ਭੋਜਨ ਤਿਆਰ ਕਰਨਾ ਅਤੇ ਘਰ ਨੂੰ ਸਾਫ਼ ਰੱਖਣਾ",
+                "ar": "تحضير الطعام والمحافظة على نظافة المنزل"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Buying a house and getting a mortgage",
+                "es": "Comprar una casa y obtener una hipoteca",
+                "fr": "Acheter une maison et obtenir une hypothèque",
+                "zh-cn": "買房子並獲得抵押貸款",
+                "pa": "ਘਰ ਖਰੀਦਣਾ ਅਤੇ ਗਿਰਵੀਨਾਮਾ ਲੈਣਾ",
+                "ar": "شراء منزل والحصول على رهن عقاري"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 7,
+    "questions": [
+        {
+            "content": {
+                "en": "Give an example of how you can help in the community.",
+                "es": "Da un ejemplo de cómo puedes ayudar en la comunidad.",
+                "fr": "Donnez un exemple de la façon dont vous pouvez aider dans la communauté.",
+                "zh-cn": "舉例說明您如何為社區提供協助。",
+                "pa": "ਇੱਕ ਉਦਾਹਰਣ ਦਿਓ ਕਿ ਤੁਸੀਂ ਸਮਾਜ ਵਿੱਚ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ।",
+                "ar": "أعط مثالاً عن كيف يمكنك المساعدة في المجتمع."
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "The most correct answer is: (Fruit orchards and vineyards)",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Volunteer at a food bank",
+                "es": "Voluntario en un banco de alimentos",
+                "fr": "Bénévole dans une banque alimentaire",
+                "zh-cn": "在食物銀行當志願者",
+                "pa": "ਇੱਕ ਫੂਡ ਬੈਂਕ ਵਿੱਚ ਵਲੰਟੀਅਰ",
+                "ar": "متطوعة في بنك الطعام"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Keep your properties organized",
+                "es": "Mantenga sus propiedades organizadas",
+                "fr": "Garder vos propriétés organisées",
+                "zh-cn": "讓你的財產井井有條",
+                "pa": "ਆਪਣੀਆਂ ਜਾਇਦਾਦਾਂ ਨੂੰ ਵਿਵਸਥਿਤ ਰੱਖੋ",
+                "ar": "حافظ على تنظيم ممتلكاتك"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Wear red on Canada Day",
+                "es": "Viste de rojo el Día de Canadá",
+                "fr": "Porter du rouge le jour de la fête du Canada",
+                "zh-cn": "加拿大國慶日穿紅色衣服",
+                "pa": "ਕੈਨੇਡਾ ਡੇਅ 'ਤੇ ਲਾਲ ਪਹਿਨੋ",
+                "ar": "ارتدي اللون الأحمر في يوم كندا"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Mind your own business",
+                "es": "Ocúpate de tus propios asuntos",
+                "fr": "Occupez-vous de vos oignons",
+                "zh-cn": "管好自己的事",
+                "pa": "ਆਪਣੇ ਖੁਦ ਦੇ ਕਾਰੋਬਾਰ ਦਾ ਧਿਆਨ ਰੱਖੋ",
+                "ar": "اهتم بشؤونك الخاصة"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 8,
+    "questions": [
+        {
+            "content": {
+                "en": "List three ways you can protect the environment.",
+                "es": "Enumere tres formas en que puede proteger el medio ambiente.",
+                "fr": "Énumérez trois façons de protéger l'environnement.",
+                "zh-cn": "列出三種保護環境的方法。",
+                "pa": "ਤਿੰਨ ਤਰੀਕਿਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨਾਲ ਤੁਸੀਂ ਵਾਤਾਵਰਣ ਦੀ ਰੱਖਿਆ ਕਰ ਸਕਦੇ ਹੋ।",
+                "ar": "اذكر ثلاث طرق يمكنك من خلالها حماية البيئة."
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "Recycle, conserve energy and water, and join a carpool",
+                "es": "Recicla, conserva energía y agua y únete a un viaje compartido",
+                "fr": "Recycler, économiser l'énergie et l'eau et joindre un covoiturage",
+                "zh-cn": "回收、節省能源和水，並加入共乘服務",
+                "pa": "ਰੀਸਾਈਕਲ ਕਰੋ, ਊਰਜਾ ਅਤੇ ਪਾਣੀ ਦੀ ਰੱਖਿਆ ਕਰੋ, ਅਤੇ ਇੱਕ ਕਾਰਪੂਲ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+                "ar": "قم بإعادة التدوير والحفاظ على الطاقة والمياه والانضمام إلى مرافقي السيارات"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "Recycle, conserve energy, and buy bottled water",
+                "es": "Recicla, conserva energía y compra agua embotellada.",
+                "fr": "Recycler, économiser de l'énergie et acheter de l'eau en bouteille",
+                "zh-cn": "回收、節省能源並購買瓶裝水",
+                "pa": "ਰੀਸਾਈਕਲ ਕਰੋ, ਊਰਜਾ ਬਚਾਓ, ਅਤੇ ਬੋਤਲਬੰਦ ਪਾਣੀ ਖਰੀਦੋ",
+                "ar": "قم بإعادة التدوير والحفاظ على الطاقة وشراء المياه المعبأة"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Recycle, conserve energy, and mow your lawn",
+                "es": "Recicla, conserva energía y corta el césped",
+                "fr": "Recycler, économiser de l'énergie et tondre votre pelouse",
+                "zh-cn": "回收、節省能源並修剪草坪",
+                "pa": "ਰੀਸਾਈਕਲ ਕਰੋ, ਊਰਜਾ ਬਚਾਓ, ਅਤੇ ਆਪਣੇ ਲਾਅਨ ਨੂੰ ਕੱਟੋ",
+                "ar": "قم بإعادة التدوير، والحفاظ على الطاقة، وجز العشب الخاص بك"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "Recycle, conserve energy, and drive your car to work",
+                "es": "Recicla, conserva energía y conduce tu coche al trabajo",
+                "fr": "Recycler, économiser de l'énergie et conduire votre voiture au travail",
+                "zh-cn": "回收、節省能源並駕駛您的汽車上班",
+                "pa": "ਰੀਸਾਈਕਲ ਕਰੋ, ਊਰਜਾ ਬਚਾਓ, ਅਤੇ ਆਪਣੀ ਕਾਰ ਨੂੰ ਕੰਮ 'ਤੇ ਚਲਾਓ",
+                "ar": "قم بإعادة التدوير والحفاظ على الطاقة وقدة سيارتك للعمل"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 9,
+    "questions": [
+        {
+            "content": {
+                "en": "What do you promise when you take the oath of citizenship?",
+                "es": "¿Qué prometes cuando prestas juramento de ciudadanía?",
+                "fr": "Que promettez-vous lorsque vous prêtez serment de citoyenneté?",
+                "zh-cn": "當您宣誓成為公民時，您會做出什麼承諾？",
+                "pa": "ਜਦੋਂ ਤੁਸੀਂ ਨਾਗਰਿਕਤਾ ਦੀ ਸਹੁੰ ਚੁੱਕਦੇ ਹੋ ਤਾਂ ਤੁਸੀਂ ਕੀ ਵਾਅਦਾ ਕਰਦੇ ਹੋ?",
+                "ar": "ماذا وعدت عندما تؤدي يمين المواطنة؟"
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "To pledge your loyalty to the Sovereign, King Charles the Third",
+                "es": "Para jurar lealtad al soberano, el rey Carlos III",
+                "fr": "Pour promettre votre loyauté envers la souveraine, le Roi Charles III",
+                "zh-cn": "宣誓效忠君主查理三世",
+                "pa": "ਸਰਬਸ਼ਕਤੀਮਾਨ, ਕਿੰਗ ਚਾਰਲਸ ਤੀਜੇ ਪ੍ਰਤੀ ਆਪਣੀ ਵਫ਼ਾਦਾਰੀ ਦਾ ਵਾਅਦਾ ਕਰਨ ਲਈ",
+                "ar": "لتعهد الولاء للملك الملك تشارلز الثالث"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "To pledge your loyalty to the Sovereign, Queen Elizabeth II",
+                "es": "Para jurar lealtad a la Soberana, la Reina Isabel II",
+                "fr": "Pour promettre votre loyauté envers la souveraine, la reine Elizabeth II",
+                "zh-cn": "宣誓效忠英國女王伊莉莎白二世",
+                "pa": "ਪ੍ਰਭੂਸੱਤਾ, ਮਹਾਰਾਣੀ ਐਲਿਜ਼ਾਬੈਥ II ਪ੍ਰਤੀ ਆਪਣੀ ਵਫ਼ਾਦਾਰੀ ਦਾ ਵਾਅਦਾ ਕਰਨ ਲਈ",
+                "ar": "للتعهد بالولاء للملكة الملكة إليزابيث الثانية"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "To pledge your allegiance to the flag and fulfill the duties of a Canadian",
+                "es": "Jurar lealtad a la bandera y cumplir con los deberes de un canadiense.",
+                "fr": "Pour prêter allégeance au drapeau et remplir les devoirs d'un Canadien",
+                "zh-cn": "宣誓效忠國旗並履行加拿大人的職責",
+                "pa": "ਝੰਡੇ ਪ੍ਰਤੀ ਆਪਣੀ ਵਫ਼ਾਦਾਰੀ ਦਾ ਵਾਅਦਾ ਕਰਨਾ ਅਤੇ ਇੱਕ ਕੈਨੇਡੀਅਨ ਦੇ ਫਰਜ਼ਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨਾ",
+                "ar": "التعهد بالولاء للعلم والقيام بواجبات الكندي"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "To pledge your allegiance to the Canadian Constitution",
+                "es": "Para jurar lealtad a la Constitución canadiense",
+                "fr": "Pour prêter allégeance à la Constitution canadienne",
+                "zh-cn": "宣誓效忠加拿大憲法",
+                "pa": "ਕੈਨੇਡੀਅਨ ਸੰਵਿਧਾਨ ਪ੍ਰਤੀ ਆਪਣੀ ਵਫ਼ਾਦਾਰੀ ਦਾ ਵਾਅਦਾ ਕਰਨ ਲਈ",
+                "ar": "للتعهد بالولاء للدستور الكندي"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "To pledge your loyalty to Canada from sea to sea",
+                "es": "Para prometer su lealtad a Canadá de mar a mar.",
+                "fr": "Pour garantir votre fidélité au Canada d'un océan à l'autre",
+                "zh-cn": "宣誓您對加拿大的忠誠",
+                "pa": "ਕਨੇਡਾ ਤੋਂ ਸਮੁੰਦਰ ਤੱਕ ਆਪਣੀ ਵਫ਼ਾਦਾਰੀ ਦਾ ਵਾਅਦਾ ਕਰਨ ਲਈ",
+                "ar": "لتعهد الولاء لكندا من البحر إلى البحر"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+},
+{
+    "order": 10,
+    "questions": [
+        {
+            "content": {
+                "en": "Which part of the Constitution legally protects the basic rights and freedoms of all Canadians?",
+                "es": "¿Qué parte de la Constitución protege legalmente los derechos y libertades básicos de todos los canadienses?",
+                "fr": "Quelle partie de la Constitution protège légalement les droits et libertés fondamentaux de tous les Canadiens?",
+                "zh-cn": "憲法的哪一部分合法地保護所有加拿大人的基本權利和自由？",
+                "pa": "ਸੰਵਿਧਾਨ ਦਾ ਕਿਹੜਾ ਹਿੱਸਾ ਸਾਰੇ ਕੈਨੇਡੀਅਨਾਂ ਦੇ ਬੁਨਿਆਦੀ ਅਧਿਕਾਰਾਂ ਅਤੇ ਆਜ਼ਾਦੀਆਂ ਦੀ ਕਾਨੂੰਨੀ ਤੌਰ 'ਤੇ ਸੁਰੱਖਿਆ ਕਰਦਾ ਹੈ?",
+                "ar": "أي جزء من الدستور يحمي بشكل قانوني الحقوق والحريات الأساسية لجميع الكنديين؟"
+            }
+        }
+    ],
+    "type": "SC",
+    "image": "",
+    "notes": "",
+    "difficulty": "",
+    "categories": "",
+    "answers": [
+        {
+            "content": {
+                "en": "The Canadian Charter of Rights and Freedoms",
+                "es": "La Carta Canadiense de Derechos y Libertades",
+                "fr": "La Charte canadienne des droits et libertés",
+                "zh-cn": "加拿大權利與自由憲章",
+                "pa": "ਅਧਿਕਾਰਾਂ ਅਤੇ ਆਜ਼ਾਦੀਆਂ ਦਾ ਕੈਨੇਡੀਅਨ ਚਾਰਟਰ",
+                "ar": "الميثاق الكندي للحقوق والحريات"
+            },
+            "isCorrect": true
+        },
+        {
+            "content": {
+                "en": "The British Charter of Rights and Freedoms",
+                "es": "La Carta Británica de Derechos y Libertades",
+                "fr": "La Charte britannique des droits et libertés",
+                "zh-cn": "英國權利與自由憲章",
+                "pa": "ਅਧਿਕਾਰਾਂ ਅਤੇ ਆਜ਼ਾਦੀਆਂ ਦਾ ਬ੍ਰਿਟਿਸ਼ ਚਾਰਟਰ",
+                "ar": "الميثاق البريطاني للحقوق والحريات"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "The Canadian Charter of Freedoms",
+                "es": "La Carta Canadiense de Libertades",
+                "fr": "La Charte canadienne des libertés",
+                "zh-cn": "加拿大自由憲章",
+                "pa": "ਕੈਨੇਡੀਅਨ ਚਾਰਟਰ ਆਫ਼ ਫ੍ਰੀਡਮਜ਼",
+                "ar": "الميثاق الكندي للحريات"
+            },
+            "isCorrect": false
+        },
+        {
+            "content": {
+                "en": "The Civil Code of France",
+                "es": "El Código Civil de Francia",
+                "fr": "Le Code civil de la France",
+                "zh-cn": "法國民法典",
+                "pa": "ਫਰਾਂਸ ਦਾ ਸਿਵਲ ਕੋਡ",
+                "ar": "القانون المدني الفرنسي"
+            },
+            "isCorrect": false
+        }
+    ],
+    "filters": {}
+}
+]
