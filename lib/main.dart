@@ -1,11 +1,11 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:provider/provider.dart';
 import 'package:trivia_app/models/questions.dart';
 import 'package:trivia_app/screens/history.dart';
 import 'package:trivia_app/screens/questions.dart';
 import 'package:trivia_app/screens/test3.dart';
+import 'package:trivia_app/models/test_score_db.dart';
 
 Future<String> getRandomJsonFile() async {
   try {
@@ -29,7 +29,7 @@ Future<String> getRandomJsonFile() async {
     return selectedFile;
   } catch (e) {
     print("Error al seleccionar un archivo JSON: $e");
-    return "assets/default.json"; // Archivo de respaldo si ocurre un error
+    return "assets/test_1.json"; // Archivo de respaldo si ocurre un error
   }
 }
 
@@ -38,7 +38,10 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => QuestionsModel(jsonFile: "assets/default.json")),
+        ChangeNotifierProvider(
+          create: (context) =>
+              QuestionsModel(jsonFile: "assets/test_1.json"),
+        ),
         ChangeNotifierProvider(create: (context) => TestModel()),
       ],
       child: const MyApp(),
@@ -99,6 +102,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String? randomJson;
+  bool _isJsonLoaded = false; // Bandera para controlar la carga del JSON
 
   @override
   void initState() {
@@ -106,20 +110,19 @@ class _HomePageState extends State<HomePage> {
     _loadRandomJson();
   }
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _loadRandomJson();
-  }
-
+  // Cargar JSON solo una vez
   Future<void> _loadRandomJson() async {
-    String newJson = await getRandomJsonFile();
-    if (mounted) {
-      setState(() {
-        randomJson = newJson;
-      });
-      // Actualizar el modelo con el nuevo JSON
-      Provider.of<QuestionsModel>(context, listen: false).updateJsonFile(newJson);
+    if (!_isJsonLoaded) {
+      String newJson = await getRandomJsonFile();
+      if (mounted) {
+        setState(() {
+          randomJson = newJson;
+          _isJsonLoaded = true; // Marcar como cargado
+        });
+        // Actualizar el modelo con el nuevo JSON
+        Provider.of<QuestionsModel>(context, listen: false)
+            .updateJsonFile(newJson);
+      }
     }
   }
 
@@ -131,7 +134,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-           
             const SizedBox(height: 16),
             HomeButton(
               text: 'Test',
@@ -161,7 +163,8 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const TestHistoryScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const TestHistoryScreen()),
                 );
               },
             ),
