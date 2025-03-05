@@ -1,42 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:isar/isar.dart';
-import 'package:provider/provider.dart';
 import 'package:trivia_app/Screens/results.dart';
-import 'package:trivia_app/models/questions.dart';
+import 'package:trivia_app/models/cubic_question.dart'; // Aquí se definen QuestionsCubit, TestCubit, etc.
+import 'package:trivia_app/database/db.dart'; // Base de datos
 import 'package:trivia_app/models/test_score_db.dart';
-import 'package:trivia_app/database/db.dart'; // Importa la base de datos
 
-class Test extends StatelessWidget {
-  const Test({super.key});
+/// Pantalla de Test que utiliza Bloc para obtener las preguntas
+class TestScreen extends StatelessWidget {
+  const TestScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Test")),
-      body: Consumer<QuestionsModel>(builder: (context, questionsModel, child) {
-        if (questionsModel.isLoading) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        return Question(
-          questions: questionsModel.questions,
-          testName: questionsModel.jsonFile,
-        );
-      }),
+      body: BlocBuilder<QuestionsCubit, QuestionsState>(
+        builder: (context, state) {
+          if (state is QuestionsLoading || state is QuestionsInitial) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (state is QuestionsLoaded) {
+            return TQuestion(
+              questions: state.questions,
+              testName: state.jsonFile,
+            );
+          } else if (state is QuestionsError) {
+            return Center(child: Text(state.message));
+          }
+          return Container();
+        },
+      ),
     );
   }
 }
 
-class Question extends StatefulWidget {
+/// Widget que muestra las preguntas y controla la navegación
+class TQuestion extends StatefulWidget {
   final List<QuestionItem> questions;
   final String testName;
 
-  const Question({super.key, required this.questions, required this.testName});
+  const TQuestion({super.key, required this.questions, required this.testName});
 
   @override
-  State<Question> createState() => _QuestionState();
+  State<TQuestion> createState() => _QuestionState();
 }
 
-class _QuestionState extends State<Question> {
+class _QuestionState extends State<TQuestion> {
   int index = 0;
   int results = 0;
   int wrongAnsw = 0;
@@ -59,8 +67,8 @@ class _QuestionState extends State<Question> {
 
   void checkAnswer(int i) {
     if (buttonsDisabled) return;
-    final increaseScore = Provider.of<QuestionsModel>(context, listen: false).increaseScore;
-    
+    final questionsCubit = context.read<QuestionsCubit>();
+
     setState(() {
       buttonsDisabled = true;
       bool isCorrect = widget.questions[index].correctAnswerIndex == i;
@@ -70,7 +78,8 @@ class _QuestionState extends State<Question> {
       if (!isCorrect) {
         wrongAnsw++;
       } else {
-        increaseScore();
+        // Aumenta la puntuación a través del Cubit
+        questionsCubit.increaseScore();
         results++;
       }
     });
@@ -183,10 +192,10 @@ class _QuestionState extends State<Question> {
                             child: ElevatedButton(
                               onPressed: buttonsDisabled ? null : () => checkAnswer(i),
                               style: ButtonStyle(
-                                backgroundColor: WidgetStateProperty.all(buttonColors[i]),
-                                foregroundColor: WidgetStateProperty.all(Colors.white),
-                                padding: WidgetStateProperty.all(const EdgeInsets.all(10)),
-                                shape: WidgetStateProperty.all(
+                                backgroundColor: MaterialStateProperty.all(buttonColors[i]),
+                                foregroundColor: MaterialStateProperty.all(Colors.white),
+                                padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
+                                shape: MaterialStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
                                   ),
@@ -205,9 +214,9 @@ class _QuestionState extends State<Question> {
                       ElevatedButton(
                         onPressed: buttonsDisabled ? nextQuestion : null,
                         style: ButtonStyle(
-                          backgroundColor: WidgetStateProperty.all(
+                          backgroundColor: MaterialStateProperty.all(
                               buttonsDisabled ? Colors.blue : Colors.grey),
-                          foregroundColor: WidgetStateProperty.all(Colors.white),
+                          foregroundColor: MaterialStateProperty.all(Colors.white),
                         ),
                         child: const Text("Next Question"),
                       ),

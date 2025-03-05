@@ -1,15 +1,15 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:trivia_app/models/questions.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trivia_app/screens/history.dart';
 import 'package:trivia_app/screens/questions.dart';
 import 'package:trivia_app/screens/test3.dart';
-import 'package:trivia_app/models/test_score_db.dart';
+// Asegúrate de que la ruta sea la correcta donde defines TestCubit y QuestionsCubit
+import 'package:trivia_app/models/cubic_question.dart'; 
 
+/// Función para seleccionar un archivo JSON aleatorio
 Future<String> getRandomJsonFile() async {
   try {
-    // Lista de archivos JSON según pubspec.yaml
     final List<String> jsonFiles = [
       'assets/test_1.json',
       'assets/test_2.json',
@@ -22,27 +22,29 @@ Future<String> getRandomJsonFile() async {
       throw Exception("No hay archivos JSON disponibles.");
     }
 
-    // Seleccionar un archivo aleatorio
     final random = Random();
     String selectedFile = jsonFiles[random.nextInt(jsonFiles.length)];
-    print("Archivo JSON seleccionado: $selectedFile");
     return selectedFile;
   } catch (e) {
     print("Error al seleccionar un archivo JSON: $e");
-    return "assets/test_1.json"; // Archivo de respaldo si ocurre un error
+    return "assets/test_1.json";
   }
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Obtén el archivo JSON aleatorio antes de iniciar la app
+  String randomJson = await getRandomJsonFile();
+
   runApp(
-    MultiProvider(
+    MultiBlocProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) =>
-              QuestionsModel(jsonFile: "assets/test_1.json"),
+        BlocProvider<QuestionsCubit>(
+          create: (context) => QuestionsCubit(jsonFile: randomJson),
         ),
-        ChangeNotifierProvider(create: (context) => TestModel()),
+        BlocProvider<TestCubit>(
+          create: (context) => TestCubit(),
+        ),
       ],
       child: const MyApp(),
     ),
@@ -51,10 +53,11 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Trivia App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -93,38 +96,9 @@ class HomeButton extends StatelessWidget {
   }
 }
 
-class HomePage extends StatefulWidget {
+/// La HomePage es Stateless ya que la inicialización se hace en el Cubit
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  String? randomJson;
-  bool _isJsonLoaded = false; // Bandera para controlar la carga del JSON
-
-  @override
-  void initState() {
-    super.initState();
-    _loadRandomJson();
-  }
-
-  // Cargar JSON solo una vez
-  Future<void> _loadRandomJson() async {
-    if (!_isJsonLoaded) {
-      String newJson = await getRandomJsonFile();
-      if (mounted) {
-        setState(() {
-          randomJson = newJson;
-          _isJsonLoaded = true; // Marcar como cargado
-        });
-        // Actualizar el modelo con el nuevo JSON
-        Provider.of<QuestionsModel>(context, listen: false)
-            .updateJsonFile(newJson);
-      }
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -141,7 +115,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Test()),
+                  MaterialPageRoute(builder: (context) => const TestScreen()),
                 );
               },
             ),
@@ -152,7 +126,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Questions()),
+                  MaterialPageRoute(builder: (context) =>  const Questions()),
                 );
               },
             ),
@@ -163,8 +137,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const TestHistoryScreen()),
+                  MaterialPageRoute(builder: (context) => const TestHistoryScreen()),
                 );
               },
             ),
