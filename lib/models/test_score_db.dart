@@ -21,3 +21,21 @@ class TestQuestion {
 
   final testResult = IsarLink<TestResult>(); // Relación con TestResult
 }
+
+@collection
+class QuestionsEnglish {
+  Id id = Isar.autoIncrement; // ID autoincremental
+  late String questionText; // Texto de la pregunta
+  late int order;
+  late List<String> answrs;
+  late String correctAnswers; // Respuesta correcta
+}
+
+@collection
+class QuestionsFrench {
+  Id id = Isar.autoIncrement; // ID autoincremental
+  late String questionText; // Texto de la pregunta
+  late int order;
+  late List<String> answrs; // Posibles Respuestas
+  late String correctAnswers; // Respuestas correctas
+}

@@ -16,7 +16,7 @@ class Database {
 
     // Abrimos la base de datos Isar y la almacenamos en la variable estática
     _instance = await Isar.open(
-      [TestResultSchema,TestQuestionSchema], // Asegúrate de incluir tu modelo aquí
+      [TestResultSchema,TestQuestionSchema,QuestionsEnglishSchema,QuestionsFrenchSchema], // Asegúrate de incluir tu modelo aquí
       directory: dir.path,
     );
     return _instance!;

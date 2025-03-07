@@ -1,6 +1,19 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:dio/dio.dart';
+import 'package:trivia_app/database/db.dart';
+
+
+
+class LanguageCubit extends Cubit<String?> {
+  LanguageCubit() : super(null);
+
+  void setLanguage(String language) {
+    emit(language);
+  }
+}
+
 
 /// Modelo de una pregunta
 class QuestionItem {
@@ -170,5 +183,52 @@ class AnswerVisibilityCubit extends Cubit<AnswerVisibilityState> {
     final newVisibility = List<bool>.from(state.visibility);
     newVisibility[index] = !newVisibility[index];
     emit(AnswerVisibilityState(newVisibility));
+  }
+}
+
+
+
+
+
+
+/// Estados del Cubit
+abstract class ApiState {}
+
+class ApiInitial extends ApiState {}
+
+class ApiLoading extends ApiState {}
+
+class ApiSuccess extends ApiState {
+  final dynamic data;
+  ApiSuccess(this.data);
+}
+
+class ApiError extends ApiState {
+  final String message;
+  ApiError(this.message);
+}
+
+/// Cubit para manejar la petición HTTP con Dio
+class ApiCubit extends Cubit<ApiState> {
+  final Dio dio = Dio();
+
+  
+
+  ApiCubit() : super(ApiInitial());
+
+  Future<void> fetchQuestions() async {
+    
+  
+    emit(ApiLoading());
+    
+    try {
+      final response = await dio.get('https://api.verbos.com/v1/get-questions/canada');
+      
+      emit(ApiSuccess(response.data));
+
+      
+    } catch (e) {
+      emit(ApiError("Error al obtener preguntas: $e"));
+    }
   }
 }
