@@ -2,38 +2,85 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:isar/isar.dart';
 import 'package:trivia_app/Screens/results.dart';
-import 'package:trivia_app/models/cubic_question.dart'; // Aquí se definen QuestionsCubit, TestCubit, etc.
-import 'package:trivia_app/database/db.dart'; // Base de datos
-import 'package:trivia_app/models/test_score_db.dart';
+import 'package:trivia_app/models/cubic_question.dart'; // Aquí se definen QuestionsCubit, TestCubit, QuestionItem, etc.
+import 'package:trivia_app/database/db.dart';
+import 'package:trivia_app/models/test_score_db.dart'; // Base de datos
 
-/// Pantalla de Test que utiliza Bloc para obtener las preguntas
+
+/// Función que obtiene 10 preguntas aleatorias de la BD según el idioma seleccionado.
+Future<List<QuestionItem>> getRandomQuestions(BuildContext context) async {
+  final isar = await Database.instance;
+  // Obtiene el idioma del cubit; si no hay, usa English por defecto.
+  final lang = context.read<LanguageCubit>().state ?? "English";
+
+  if (lang == "Français") {
+    // Consulta todas las preguntas de la colección francesa
+    final allQuestions = await isar.questionsFrenchs.where().findAll();
+    allQuestions.shuffle(); // Mezcla la lista
+    final selected = allQuestions.take(10).toList();
+    // Mapea cada objeto a QuestionItem.
+    return selected.map((q) {
+      return QuestionItem(
+        order: q.order,
+        text: q.questionText,
+        answers: q.answrs,
+        correctAnswerIndex: q.answrs.indexWhere((a) => a == q.correctAnswers),
+      );
+    }).toList();
+  } else {
+    // Consulta todas las preguntas de la colección en inglés
+    final allQuestions = await isar.questionsEnglishs.where().findAll();
+    allQuestions.shuffle();
+    final selected = allQuestions.take(10).toList();
+    return selected.map((q) {
+      return QuestionItem(
+        order: q.order,
+        text: q.questionText,
+        answers: q.answrs,
+        correctAnswerIndex: q.answrs.indexWhere((a) => a == q.correctAnswers),
+      );
+    }).toList();
+  }
+}
+
+/// Pantalla de Test que utiliza FutureBuilder para obtener las preguntas desde la BD
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Test")),
-      body: BlocBuilder<QuestionsCubit, QuestionsState>(
-        builder: (context, state) {
-          if (state is QuestionsLoading || state is QuestionsInitial) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (state is QuestionsLoaded) {
-            return TQuestion(
-              questions: state.questions,
-              testName: state.jsonFile,
-            );
-          } else if (state is QuestionsError) {
-            return Center(child: Text(state.message));
-          }
-          return Container();
-        },
-      ),
+    return FutureBuilder<List<QuestionItem>>(
+      future: getRandomQuestions(context),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Scaffold(
+            appBar: AppBar(title: const Text("Test")),
+            body: const Center(child: CircularProgressIndicator()),
+          );
+        }
+        if (snapshot.hasError) {
+          return Scaffold(
+            appBar: AppBar(title: const Text("Test")),
+            body: Center(child: Text("Error: ${snapshot.error}")),
+          );
+        }
+        final questions = snapshot.data!;
+        // Genera un nombre de test único, por ejemplo, usando el timestamp actual.
+        final testName = "Test-${DateTime.now().millisecondsSinceEpoch}";
+        return Scaffold(
+          appBar: AppBar(title: const Text("Test")),
+          body: TQuestion(
+            questions: questions,
+            testName: testName,
+          ),
+        );
+      },
     );
   }
 }
 
-/// Widget que muestra las preguntas y controla la navegación
+
+/// Widget que muestra las preguntas y controla la navegación (sin cambios)
 class TQuestion extends StatefulWidget {
   final List<QuestionItem> questions;
   final String testName;
@@ -192,10 +239,10 @@ class _QuestionState extends State<TQuestion> {
                             child: ElevatedButton(
                               onPressed: buttonsDisabled ? null : () => checkAnswer(i),
                               style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(buttonColors[i]),
-                                foregroundColor: MaterialStateProperty.all(Colors.white),
-                                padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
-                                shape: MaterialStateProperty.all(
+                                backgroundColor: WidgetStateProperty.all(buttonColors[i]),
+                                foregroundColor: WidgetStateProperty.all(Colors.white),
+                                padding: WidgetStateProperty.all(const EdgeInsets.all(10)),
+                                shape: WidgetStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
                                   ),
@@ -214,9 +261,9 @@ class _QuestionState extends State<TQuestion> {
                       ElevatedButton(
                         onPressed: buttonsDisabled ? nextQuestion : null,
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
+                          backgroundColor: WidgetStateProperty.all(
                               buttonsDisabled ? Colors.blue : Colors.grey),
-                          foregroundColor: MaterialStateProperty.all(Colors.white),
+                          foregroundColor: WidgetStateProperty.all(Colors.white),
                         ),
                         child: const Text("Next Question"),
                       ),
