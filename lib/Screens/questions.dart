@@ -1,42 +1,47 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:isar/isar.dart';
+import 'package:trivia_app/database/db.dart';
+import 'package:trivia_app/models/cubic_question.dart';
+import 'package:trivia_app/models/test_score_db.dart';
 
-Future<List<Question>> loadQuestions() async {
-  final String response = await rootBundle.loadString('assets/test_1.json');
-  final List<dynamic> data = jsonDecode(response);
+/// Función para cargar las preguntas desde la BD según el idioma seleccionado
+Future<List<Question>> loadQuestions(BuildContext context) async {
+  final isar = await Database.instance;
+  final lang = context.read<LanguageCubit>().state ?? "English";
 
-  return data.map((q) => Question.fromJson(q)).toList();
+  if (lang == "Français") {
+    final questions = await isar.questionsFrenchs.where().findAll();
+    return questions
+        .map((q) => Question(
+              questionText: q.questionText,
+              answers: q.answrs,
+              correctAnswer: q.correctAnswers,
+            ))
+        .toList();
+  } else {
+    final questions = await isar.questionsEnglishs.where().findAll();
+    return questions
+        .map((q) => Question(
+              questionText: q.questionText,
+              answers: q.answrs,
+              correctAnswer: q.correctAnswers,
+            ))
+        .toList();
+  }
 }
 
+/// Modelo de pregunta para la UI
 class Question {
   final String questionText;
-  final Answer correctAnswer;
+  final List<String> answers;
+  final String correctAnswer;
 
-  Question({required this.questionText, required this.correctAnswer});
-
-  factory Question.fromJson(Map<String, dynamic> json) {
-    return Question(
-      questionText: json['questions'][0]['content']['es'],
-      correctAnswer: (json['answers'] as List)
-          .map((ans) => Answer.fromJson(ans))
-          .firstWhere((ans) => ans.isCorrect), // Solo la respuesta correcta
-    );
-  }
-}
-
-class Answer {
-  final String text;
-  final bool isCorrect;
-
-  Answer({required this.text, required this.isCorrect});
-
-  factory Answer.fromJson(Map<String, dynamic> json) {
-    return Answer(
-      text: json['content']['es'],
-      isCorrect: json['isCorrect'],
-    );
-  }
+  Question({
+    required this.questionText,
+    required this.answers,
+    required this.correctAnswer,
+  });
 }
 
 class Questions extends StatefulWidget {
@@ -53,7 +58,7 @@ class _QuestionsState extends State<Questions> {
   @override
   void initState() {
     super.initState();
-    futureQuestions = loadQuestions();
+    futureQuestions = loadQuestions(context);
     futureQuestions.then((questions) {
       setState(() {
         _showAnswers = List.generate(questions.length, (_) => false);
@@ -92,7 +97,9 @@ class _QuestionsState extends State<Questions> {
                           ),
                         ),
                         trailing: Icon(
-                          _showAnswers[index] ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+                          _showAnswers[index]
+                              ? Icons.keyboard_arrow_up
+                              : Icons.keyboard_arrow_down,
                         ),
                         onTap: () {
                           setState(() {
@@ -104,7 +111,7 @@ class _QuestionsState extends State<Questions> {
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Text(
-                            "✅ ${question.correctAnswer.text}",
+                            "✅ ${question.correctAnswer}",
                             style: const TextStyle(
                               color: Colors.green,
                               fontSize: 16,
