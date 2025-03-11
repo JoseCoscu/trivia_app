@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:isar/isar.dart';
-import 'package:trivia_app/Screens/results.dart';
 import 'package:trivia_app/models/cubic_question.dart'; // Aquí se definen QuestionsCubit, TestCubit, QuestionItem, etc.
-import 'package:trivia_app/database/db.dart';
-import 'package:trivia_app/models/test_score_db.dart'; // Base de datos
+import 'package:trivia_app/repositories/db.dart';
+import 'package:trivia_app/models/test_score_db.dart';
+import 'package:trivia_app/ui/results/widgets/results.dart'; // Base de datos
 
 
 /// Función que obtiene 10 preguntas aleatorias de la BD según el idioma seleccionado.
@@ -66,7 +66,7 @@ class TestScreen extends StatelessWidget {
         }
         final questions = snapshot.data!;
         // Genera un nombre de test único, por ejemplo, usando el timestamp actual.
-        final testName = "Test-${DateTime.now().millisecondsSinceEpoch}";
+        final testName = "Test-${DateTime.now()}";
         return Scaffold(
           appBar: AppBar(title: const Text("Test")),
           body: TQuestion(
@@ -154,7 +154,7 @@ class _QuestionState extends State<TQuestion> {
         // Eliminar preguntas previas asociadas
         await isar.testQuestions
             .filter()
-            .testResult((t) => t.idEqualTo(testResult!.id!))
+            .testResult((t) => t.idEqualTo(testResult!.id))
             .deleteAll();
       } else {
         // Si no existe, crear un nuevo resultado

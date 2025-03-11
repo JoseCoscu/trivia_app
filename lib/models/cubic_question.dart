@@ -4,8 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:trivia_app/database/db.dart';
 
-
-
 class LanguageCubit extends Cubit<String?> {
   LanguageCubit() : super(null);
 
@@ -13,7 +11,6 @@ class LanguageCubit extends Cubit<String?> {
     emit(language);
   }
 }
-
 
 /// Modelo de una pregunta
 class QuestionItem {
@@ -57,12 +54,10 @@ class QuestionsLoading extends QuestionsState {}
 class QuestionsLoaded extends QuestionsState {
   final List<QuestionItem> questions;
   final int userScore;
-  final String jsonFile;
 
   QuestionsLoaded({
     required this.questions,
-    required this.userScore,
-    required this.jsonFile,
+    required this.userScore
   });
 }
 
@@ -73,45 +68,10 @@ class QuestionsError extends QuestionsState {
 
 /// Cubit para manejar las preguntas y la puntuación del usuario (equivalente a QuestionsModel)
 class QuestionsCubit extends Cubit<QuestionsState> {
-  String jsonFile;
   int userScore = 0;
   List<QuestionItem> _questions = [];
 
-  QuestionsCubit({required this.jsonFile}) : super(QuestionsInitial()) {
-    _loadQuestions();
-  }
-
-  Future<void> _loadQuestions() async {
-    emit(QuestionsLoading());
-    try {
-      final String response = await rootBundle.loadString(jsonFile);
-      final List<dynamic> data = jsonDecode(response);
-
-      _questions = data.map<QuestionItem>((item) {
-        return QuestionItem(
-          order: item['order'],
-          text: item['questions'][0]['content']['es'],
-          answers: List<String>.from(
-              item['answers'].map((a) => a['content']['es'])),
-          correctAnswerIndex:
-              item['answers'].indexWhere((a) => a['isCorrect'] == true),
-        );
-      }).toList();
-    } catch (e) {
-      emit(QuestionsError("Error al cargar preguntas: $e"));
-      return;
-    }
-    emit(QuestionsLoaded(
-      questions: _questions,
-      userScore: userScore,
-      jsonFile: jsonFile,
-    ));
-  }
-
-  void updateJsonFile(String newJsonFile) {
-    jsonFile = newJsonFile;
-    _loadQuestions();
-  }
+  QuestionsCubit() : super(QuestionsInitial());
 
   List<QuestionItem> get questions => _questions;
 
@@ -130,7 +90,6 @@ class QuestionsCubit extends Cubit<QuestionsState> {
       emit(QuestionsLoaded(
         questions: _questions,
         userScore: userScore,
-        jsonFile: jsonFile,
       ));
     }
   }
@@ -141,12 +100,10 @@ class QuestionsCubit extends Cubit<QuestionsState> {
       emit(QuestionsLoaded(
         questions: _questions,
         userScore: userScore,
-        jsonFile: jsonFile,
       ));
     }
   }
 }
-
 
 class TestResultsCubit extends Cubit<TestResultsState> {
   TestResultsCubit() : super(TestResultsInitial());
@@ -168,7 +125,6 @@ class TestResultsSaved extends TestResultsState {
   TestResultsSaved(this.testName, this.correctAnswers);
 }
 
-
 /// Estado para manejar la visibilidad de las respuestas
 class AnswerVisibilityState {
   final List<bool> visibility;
@@ -177,7 +133,8 @@ class AnswerVisibilityState {
 
 /// Cubit para manejar la visibilidad de las respuestas
 class AnswerVisibilityCubit extends Cubit<AnswerVisibilityState> {
-  AnswerVisibilityCubit(int length) : super(AnswerVisibilityState(List.filled(length, false)));
+  AnswerVisibilityCubit(int length)
+      : super(AnswerVisibilityState(List.filled(length, false)));
 
   void toggleVisibility(int index) {
     final newVisibility = List<bool>.from(state.visibility);
@@ -185,11 +142,6 @@ class AnswerVisibilityCubit extends Cubit<AnswerVisibilityState> {
     emit(AnswerVisibilityState(newVisibility));
   }
 }
-
-
-
-
-
 
 /// Estados del Cubit
 abstract class ApiState {}
@@ -212,21 +164,16 @@ class ApiError extends ApiState {
 class ApiCubit extends Cubit<ApiState> {
   final Dio dio = Dio();
 
-  
-
   ApiCubit() : super(ApiInitial());
 
   Future<void> fetchQuestions() async {
-    
-  
     emit(ApiLoading());
-    
-    try {
-      final response = await dio.get('https://api.verbos.com/v1/get-questions/canada');
-      
-      emit(ApiSuccess(response.data));
 
-      
+    try {
+      final response =
+          await dio.get('https://api.verbos.com/v1/get-questions/canada');
+
+      emit(ApiSuccess(response.data));
     } catch (e) {
       emit(ApiError("Error al obtener preguntas: $e"));
     }

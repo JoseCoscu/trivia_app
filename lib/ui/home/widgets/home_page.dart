@@ -7,7 +7,7 @@ import 'package:trivia_app/repositories/db.dart';
 import 'package:trivia_app/ui/history/widgets/history.dart';
 import 'package:trivia_app/ui/home/widgets/home_button.dart';
 import 'package:trivia_app/ui/questions/widgets/questions.dart';
-import 'package:trivia_app/ui/test/view_models/test.dart';
+import 'package:trivia_app/ui/test/widgets/test.dart';
 
 
 class HomePage extends StatefulWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:isar/isar.dart';
-import 'package:trivia_app/Screens/results.dart';
 import 'package:trivia_app/models/cubic_question.dart'; // Aquí se definen QuestionsCubit, TestCubit, QuestionItem, etc.
 import 'package:trivia_app/database/db.dart';
-import 'package:trivia_app/models/test_score_db.dart'; // Base de datos
+import 'package:trivia_app/models/test_score_db.dart';
+import 'package:trivia_app/ui/results/widgets/results.dart'; // Base de datos
 
 
 /// Función que obtiene 10 preguntas aleatorias de la BD según el idioma seleccionado.
