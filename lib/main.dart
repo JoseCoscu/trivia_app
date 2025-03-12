@@ -1,8 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trivia_app/models/cubic_question.dart';
+import 'package:trivia_app/ui/history/view_models/history_cubic.dart';
+import 'package:trivia_app/ui/home/view_models/home_view_model.dart';
 import 'package:trivia_app/ui/home/widgets/home_page.dart';
+import 'package:trivia_app/ui/test/view_models/test_mdoel.dart';
 
 
 void main() async {

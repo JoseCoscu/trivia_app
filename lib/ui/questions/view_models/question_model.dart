@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:isar/isar.dart';
-import 'package:trivia_app/database/db.dart';
-import 'package:trivia_app/models/cubic_question.dart';
 import 'package:trivia_app/models/test_score_db.dart';
+import 'package:trivia_app/repositories/db.dart';
+import 'package:trivia_app/ui/home/view_models/home_view_model.dart';
+
 
 Future<List<Question>> loadQuestions(BuildContext context) async {
   final isar = await Database.instance;

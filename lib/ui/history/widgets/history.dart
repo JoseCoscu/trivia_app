@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:isar/isar.dart';
 import 'package:trivia_app/models/test_score_db.dart'; // Importa tu modelo
-import 'package:trivia_app/database/db.dart'; // Importa la base de datos
+import 'package:trivia_app/repositories/db.dart'; // Importa la base de datos
 
 class TestHistoryScreen extends StatefulWidget {
   const TestHistoryScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:trivia_app/models/cubic_question.dart';
 import 'package:trivia_app/ui/home/widgets/home_page.dart';
+import 'package:trivia_app/ui/results/view_models/results_models.dart';
 import 'package:trivia_app/ui/test/widgets/test.dart';
 
 
